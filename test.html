@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AgriTech Test</title>
+</head>
+
+<body>
+
+<h2>Register User</h2>
+
+<input id="name" placeholder="First Name">
+<input id="email" placeholder="Email">
+<input id="password" placeholder="Password" type="password">
+
+<button onclick="register()">Register</button>
+
+<script>
+function register() {
+
+    fetch("http://localhost:8080/api/users/register", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            firstName: document.getElementById("name").value,
+            lastName: "Test",
+            email: document.getElementById("email").value,
+            phone: "0700000000",
+            accountType: "Farmer",
+            password: document.getElementById("password").value
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert("Registration successful!");
+        console.log(data);
+    })
+    .catch(error => {
+        alert("Error connecting to Java");
+        console.log(error);
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,553 @@
+.dashboard-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 6%;
+    background: #ccd5d0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.dashboard-logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #218739;
+    white-space: nowrap;
+}
+
+.dashboard-logo i {
+    margin-right: 7px;
+}
+
+.dashboard-navbar nav {
+    display: flex;
+    gap: 20px;
+}
+
+.dashboard-navbar nav a {
+    text-decoration: none;
+    color: #141f1a;
+    font-size: 14px;
+    padding: 8px 5px;
+    transition: 0.3s;
+}
+
+.dashboard-navbar nav a:hover,
+.dashboard-navbar nav a.active {
+    color: #218739;
+}
+
+.dashboard-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dashboard-user small {
+    display: block;
+    color: #888;
+    font-size: 11px;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #88cb8d;
+    color: #218739;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-btn {
+    border: none;
+    background: transparent;
+    color: #777;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* ================= DASHBOARD HEADER ================= */
+
+.dashboard-header {
+    padding: 45px 6% 30px;
+    background: #11ac11;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-text {
+    color: #218739;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 10px;
+    font-size: 34px;
+    color: #0e0d0d;
+}
+
+.dashboard-header p {
+    color: #0b0707;
+}
+
+.dashboard-date {
+    background: rgb(61, 152, 93);
+    padding: 14px 18px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-date i {
+    color: #218739;
+    margin-right: 8px;
+}
+
+
+/* ================= STATISTICS ================= */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 30px 6%;
+}
+
+.dashboard-card {
+    background: rgb(165, 207, 175);
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dashboard-card-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    background: #e8f5e9;
+    color: #218739;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.dashboard-card p {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.dashboard-card h2 {
+    margin: 0 0 5px;
+    font-size: 27px;
+    color: #100d0d;
+}
+
+.dashboard-card h2 small {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.dashboard-card span {
+    color: #100c0c;
+    font-size: 12px;
+}
+
+.dashboard-card .positive {
+    color: #218739;
+}
+
+
+/* ================= MAIN DASHBOARD ================= */
+
+.dashboard-main {
+    padding: 0 6% 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+.dashboard-panel {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.panel-header h2 {
+    margin: 0 0 5px;
+    color: #222;
+}
+
+.panel-header p {
+    margin: 0;
+    color: #888;
+    font-size: 13px;
+}
+
+.panel-header a {
+    color: #218739;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.panel-header button {
+    border: none;
+    background: #218739;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+/* ================= CROP HEALTH ================= */
+
+.crop-row {
+    display: grid;
+    grid-template-columns: 130px 1fr 45px;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.crop-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #444;
+}
+
+.crop-name i {
+    color: #218739;
+}
+
+.progress-container {
+    height: 9px;
+    background: #eeeeee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #218739;
+    border-radius: 10px;
+}
+
+.crop-row strong {
+    color: #218739;
+}
+
+
+/* ================= WEATHER ================= */
+
+.weather-dashboard {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.weather-big-icon {
+    font-size: 55px;
+    color: #e9a21b;
+}
+
+.weather-dashboard h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+.weather-dashboard p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.weather-details div {
+    background: #eef2ef;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.weather-details i {
+    display: block;
+    color: #218739;
+    margin-bottom: 6px;
+}
+
+.weather-details span {
+    display: block;
+    color: #888;
+    font-size: 11px;
+}
+
+.weather-details strong {
+    font-size: 13px;
+}
+
+
+/* ================= ACTIVITIES ================= */
+
+.activity {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.activity-icon {
+    min-width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #e8f5e9;
+    color: #218739;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activity strong {
+    color: #333;
+}
+
+.activity p {
+    margin: 4px 0;
+    color: #777;
+    font-size: 13px;
+}
+
+.activity small {
+    color: #999;
+    font-size: 11px;
+}
+
+
+/* ================= AI PANEL ================= */
+
+.ai-panel {
+    background: #0e9b1f;
+}
+
+.ai-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ai-title > i {
+    font-size: 30px;
+    color: #218739;
+}
+
+.ai-title h2 {
+    margin: 0 0 5px;
+}
+
+.ai-title p {
+    margin: 0;
+    color: #101010;
+    font-size: 13px;
+}
+
+.ai-message {
+    background: white;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+.ai-panel button {
+    border: none;
+    background: #218739;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.ai-panel button:hover {
+    opacity: 0.9;
+}
+
+
+/* ================= QUICK ACTIONS ================= */
+
+.quick-actions {
+    padding: 10px 6% 50px;
+}
+
+.quick-actions h2 {
+    margin-bottom: 20px;
+}
+
+.quick-action-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.quick-action-grid a {
+    background: white;
+    padding: 25px;
+    border-radius: 13px;
+    text-decoration: none;
+    color: #0a0909;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.quick-action-grid a:hover {
+    transform: translateY(-5px);
+}
+
+.quick-action-grid i {
+    display: block;
+    color: #218739;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.quick-action-grid strong {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.quick-action-grid span {
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.dashboard-footer {
+    background: #172b1b;
+    color: white;
+    padding: 30px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-footer h3 {
+    margin: 0 0 7px;
+}
+
+.dashboard-footer p {
+    color: #bbb;
+    margin: 0;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 1000px) {
+
+    .dashboard-navbar nav {
+        display: none;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-main {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-action-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .dashboard-navbar {
+        padding: 13px 4%;
+    }
+
+    .dashboard-logo {
+        font-size: 20px;
+    }
+
+    .dashboard-user div:nth-child(2) {
+        display: none;
+    }
+
+    .dashboard-header {
+        padding: 30px 5%;
+        display: block;
+    }
+
+    .dashboard-header h1 {
+        font-size: 27px;
+    }
+
+    .dashboard-date {
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+        padding: 25px 5%;
+    }
+
+    .dashboard-main {
+        padding: 0 5% 30px;
+    }
+
+    .dashboard-panel {
+        padding: 18px;
+    }
+
+    .crop-row {
+        grid-template-columns: 90px 1fr 35px;
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    .weather-details {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-actions {
+        padding: 10px 5% 40px;
+    }
+
+    .quick-action-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-footer {
+        display: block;
+        text-align: center;
+    }
+
+}

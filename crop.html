@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgrTech | Crop Explorer</title>
+
+    <link rel="stylesheet" href="crop.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>🌿</span>
+        Agr<span>Tech</span>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="crop.html">Crops</a>
+        <a href="weather.html">Weather</a>
+        <a href="farmers.html">Farmers</a>
+        
+        
+
+    
+
+    <a href="registeration.html" class="join-btn">Join AgrTech</a>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <span class="tag">SMART FARMING • CROP INTELLIGENCE</span>
+
+        <h1>
+            Grow the right crop
+            <span>at the right time.</span>
+        </h1>
+
+        <p>
+            Explore crop information, discover suitable crops for
+            your farm and make informed agricultural decisions.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#crop-library" class="primary-btn">
+                Explore Crops
+            </a>
+
+            <a href="#smart-match" class="secondary-btn">
+                Find My Crop
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div class="weather-icon">🌦️</div>
+
+        <p>SMART FARMING</p>
+
+        <h3>Make informed<br>crop decisions.</h3>
+
+        <div class="hero-stat">
+
+            <div>
+                <strong>07+</strong>
+                <small>Crop Guides</small>
+            </div>
+
+            <div>
+                <strong>04</strong>
+                <small>Crop Types</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUICK STATS ================= -->
+
+<section class="quick-stats">
+
+    <div class="stat">
+        <span>🌱</span>
+        <div>
+            <strong>7+</strong>
+            <p>Crop Guides</p>
+        </div>
+    </div>
+
+    <div class="stat">
+        <span>💧</span>
+        <div>
+            <strong>Water</strong>
+            <p>Requirement Guide</p>
+        </div>
+    </div>
+
+    <div class="stat">
+        <span>🌍</span>
+        <div>
+            <strong>Kenya</strong>
+            <p>Focused Agriculture</p>
+        </div>
+    </div>
+
+    <div class="stat">
+        <span>📊</span>
+        <div>
+            <strong>Smart</strong>
+            <p>Crop Comparison</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ================= CROP LIBRARY ================= -->
+
+<section class="crop-library" id="crop-library">
+
+    <div class="section-title">
+
+        <span>EXPLORE</span>
+
+        <h2>Crop Intelligence Library</h2>
+
+        <p>
+            Select a crop to discover its growing requirements,
+            farming information and important considerations.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-area">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search maize, beans, coffee..."
+        >
+
+    </div>
+
+
+    <!-- FILTERS -->
+
+    <div class="filters">
+
+        <button class="filter active" data-filter="all">
+            All
+        </button>
+
+        <button class="filter" data-filter="cereal">
+            Cereals
+        </button>
+
+        <button class="filter" data-filter="vegetable">
+            Vegetables
+        </button>
+
+        <button class="filter" data-filter="fruit">
+            Fruits
+        </button>
+
+        <button class="filter" data-filter="cash">
+            Cash Crops
+        </button>
+
+    </div>
+
+
+    <!-- CROP CARDS -->
+
+    <div class="crop-grid">
+
+
+        <article
+            class="crop-card"
+            data-name="maize"
+            data-category="cereal"
+        >
+
+            <div class="crop-image">
+
+                <img src="images/WhatsApp Image 2026-09-21 at 21.41.06 m.jpeg" alt="Maize">
+
+                <span class="badge">CEREAL</span>
+
+            </div>
+
+            <div class="crop-body">
+
+                <h3>🌽 Maize</h3>
+
+                <p>
+                    A major staple crop used for food,
+                    animal feed and processing.
+                </p>
+
+                <div class="details">
+
+                    <span>⏱️ 3–6 Months</span>
+                    <span>💧 Medium</span>
+
+                </div>
+
+                <button
+                    class="view-btn"
+                    data-crop="maize"
+                >
+                    View Crop Guide →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="crop-card"
+            data-name="beans"
+            data-category="cereal"
+        >
+
+            <div class="crop-image">
+
+                <img src="images/WhatsApp Image 2026-09-21 at 21.41.05 b.jpeg" alt="Beans">
+
+                <span class="badge">LEGUME</span>
+
+            </div>
+
+            <div class="crop-body">
+
+                <h3>🫘 Beans</h3>
+
+                <p>
+                    A valuable food crop and important
+                    source of plant protein.
+                </p>
+
+                <div class="details">
+
+                    <span>⏱️ 2–4 Months</span>
+                    <span>💧 Medium</span>
+
+                </div>
+
+                <button
+                    class="view-btn"
+                    data-crop="beans"
+                >
+                    View Crop Guide →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="crop-card"
+            data-name="potatoes"
+            data-category="vegetable"
+        >
+
+            <div class="crop-image">
+
+                <img src="images/WhatsApp Image 2026-09-21 at 21.41.05 p.jpeg" alt="Potatoes">
+                <span class="badge">TUBER</span>
+
+            </div>
+
+            <div class="crop-body">
+
+                <h3>🥔 Potatoes</h3>
+
+                <p>
+                    A popular food crop that performs
+                    well in suitable cool conditions.
+                </p>
+
+                <div class="details">
+
+                    <span>⏱️ 3–4 Months</span>
+                    <span>💧 Medium</span>
+
+                </div>
+
+                <button
+                    class="view-btn"
+                    data-crop="potatoes"
+                >
+                    View Crop Guide →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="crop-card"
+            data-name="tomatoes"
+            data-category="vegetable"
+        >
+
+            <div class="crop-image">
+
+                <img src="images/WhatsApp Image 2026-09-21 at 21.41.05 t.jpeg" alt="Tomatoes">
+
+                <span class="badge">VEGETABLE</span>
+
+            </div>
+
+            <div class="crop-body">
+
+                <h3>🍅 Tomatoes</h3>
+
+                <p>
+                    A high-value horticultural crop
+                    grown for fresh markets and processing.
+                </p>
+
+                <div class="details">
+
+                    <span>⏱️ 3–4 Months</span>
+                    <span>💧 High</span>
+
+                </div>
+
+                <button
+                    class="view-btn"
+                    data-crop="tomatoes"
+                >
+                    View Crop Guide →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="crop-card"
+            data-name="wheat"
+            data-category="cereal"
+        >
+
+            <div class="crop-image">
+
+                <img src="images/WhatsApp Image 2026-09-21 at 21.41.05 w.jpeg" alt="Wheat">
+
+                <span class="badge">CEREAL</span>
+
+            </div>
+
+            <div class="crop-body">
+
+                <h3>🌾 Wheat</h3>
+
+                <p>
+                    An important cereal crop used mainly
+                    for flour and food products.
+                </p>
+
+                <div class="details">
+
+                    <span>⏱️ 4–6 Months</span>
+                    <span>💧 Medium</span>
+
+                </div>
+
+                <button
+                    class="view-btn"
+                    data-crop="wheat"
+                >
+                    View Crop Guide →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="crop-card"
+            data-name="coffee"
+            data-category="cash"
+        >
+
+            <div class="crop-image">
+
+                <img src="images/WhatsApp Image 2026-09-21 at 21.41.04 c.jpeg" alt="Coffee">
+
+                <span class="badge">CASH CROP</span>
+
+            </div>
+
+            <div class="crop-body">
+
+                <h3>☕ Coffee</h3>
+
+                <p>
+                    An important commercial crop with
+                    local and international markets.
+                </p>
+
+                <div class="details">
+
+                    <span>⏱️ Long Term</span>
+                    <span>💧 Medium</span>
+
+                </div>
+
+                <button
+                    class="view-btn"
+                    data-crop="coffee"
+                >
+                    View Crop Guide →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="crop-card"
+            data-name="avocado"
+            data-category="fruit"
+        >
+
+            <div class="crop-image">
+
+                <img src="images/WhatsApp Image 2026-09-21 at 21.41.03 a.jpeg" alt="Avocado">
+
+                <span class="badge">FRUIT</span>
+
+            </div>
+
+            <div class="crop-body">
+
+                <h3>🥑 Avocado</h3>
+
+                <p>
+                    A commercially valuable fruit crop
+                    with strong market potential.
+                </p>
+
+                <div class="details">
+
+                    <span>⏱️ Long Term</span>
+                    <span>💧 Medium</span>
+
+                </div>
+
+                <button
+                    class="view-btn"
+                    data-crop="avocado"
+                >
+                    View Crop Guide →
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+    <p id="noResults" class="no-results">
+        No crops found.
+    </p>
+
+</section>
+
+
+<!-- ================= SMART MATCH ================= -->
+
+<section class="smart-match" id="smart-match">
+
+    <div class="section-title light">
+
+        <span>SMART AGRICULTURE</span>
+
+        <h2>Which crop suits your farm?</h2>
+
+        <p>
+            Enter a few details about your farm and receive
+            a basic crop suggestion.
+        </p>
+
+    </div>
+
+
+    <div class="match-box">
+
+        <div class="match-form">
+
+            <label>Soil Type</label>
+
+            <select id="soilType">
+
+                <option value="">Select soil</option>
+
+                <option value="loamy">Loamy</option>
+
+                <option value="sandy">Sandy</option>
+
+                <option value="clay">Clay</option>
+
+            </select>
+
+
+            <label>Water Availability</label>
+
+            <select id="waterLevel">
+
+                <option value="">Select water level</option>
+
+                <option value="low">Low</option>
+
+                <option value="medium">Medium</option>
+
+                <option value="high">High</option>
+
+            </select>
+
+
+            <label>Climate</label>
+
+            <select id="climate">
+
+                <option value="">Select climate</option>
+
+                <option value="cool">Cool</option>
+
+                <option value="moderate">Moderate</option>
+
+                <option value="warm">Warm</option>
+
+            </select>
+
+
+            <button id="recommendBtn">
+                Find Suitable Crops
+            </button>
+
+        </div>
+
+
+        <div class="recommendation" id="recommendation">
+
+            <div class="recommend-icon">🌱</div>
+
+            <h3>Your Recommendation</h3>
+
+            <p>
+                Complete the farm profile to see
+                suggested crops.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CROP JOURNEY ================= -->
+
+<section class="journey">
+
+    <div class="section-title">
+
+        <span>FARM SMARTER</span>
+
+        <h2>Your Crop Journey</h2>
+
+        <p>
+            AgrTech connects different parts of the farming process
+            in one platform.
+        </p>
+
+    </div>
+
+
+    <div class="journey-grid">
+
+        <div class="journey-card">
+
+            <div>🌱</div>
+
+            <h3>Choose</h3>
+
+            <p>
+                Identify crops that match your farm.
+            </p>
+
+        </div>
+
+
+        <div class="journey-line">→</div>
+
+
+        <div class="journey-card">
+
+            <div>🌿</div>
+
+            <h3>Grow</h3>
+
+            <p>
+                Access useful crop and soil information.
+            </p>
+
+        </div>
+
+
+        <div class="journey-line">→</div>
+
+
+        <div class="journey-card">
+
+            <div>📈</div>
+
+            <h3>Sell</h3>
+
+            <p>
+                Connect your produce with potential buyers.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BOTTOM CTA ================= -->
+
+<section class="cta">
+
+    <div>
+
+        <span>READY TO FARM SMARTER?</span>
+
+        <h2>
+            Turn better information into
+            better farming decisions.
+        </h2>
+
+        <a href="register.html">
+            Get Started with AgrTech →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-main">
+
+        <div>
+
+            <h2>🌿 AgrTech</h2>
+
+            <p>
+                A digital agriculture platform designed to
+                connect farmers with useful agricultural information.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Platform</h4>
+
+            <a href="plants.html">Crop Guide</a>
+            <a href="soil.html">Soil</a>
+            <a href="weather.html">Weather</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Community</h4>
+
+            <a href="farmers.html">Farmers</a>
+            <a href="buyers.html">Buyers</a>
+            <a href="suppliers.html">Suppliers</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Support</h4>
+
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <a href="register.html">Register</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>© 2026 AgrTech. All Rights Reserved.</p>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= CROP MODAL ================= -->
+
+<div class="modal" id="cropModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" id="closeModal">
+            ×
+        </button>
+
+        <span id="modalCategory">CROP GUIDE</span>
+
+        <h2 id="modalTitle">Maize</h2>
+
+        <p id="modalDescription"></p>
+
+        <div class="modal-grid">
+
+            <div>
+                <strong>⏱️ Growing Period</strong>
+                <span id="modalPeriod"></span>
+            </div>
+
+            <div>
+                <strong>💧 Water</strong>
+                <span id="modalWater"></span>
+            </div>
+
+            <div>
+                <strong>🌱 Soil</strong>
+                <span id="modalSoil"></span>
+            </div>
+
+            <div>
+                <strong>📈 Main Use</strong>
+                <span id="modalUse"></span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="crop.js"></script>
+
+</body>
+</html>

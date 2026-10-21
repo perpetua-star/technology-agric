@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgriTech | Weather</title>
+
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🌱 AgriTech
+            </div>
+
+            
+            
+
+        </nav>
+        <nav class="navigation" id="navigation">
+            <a href="index.html">Home</a>
+            <a href="crop.html">Crops</a>
+            <a href="weather.html">Weather</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">AGRITECH WEATHER INTELLIGENCE</p>
+
+            <h1>Smart Weather.<br>
+                <span>Smarter Farming.</span>
+            </h1>
+
+            <p>
+                Get weather information and practical farm recommendations
+                to help you make better decisions for your crops.
+            </p>
+
+            <div class="location-box">
+                <input
+                    type="text"
+                    id="locationInput"
+                    placeholder="Enter your county or town"
+                >
+
+                <button onclick="updateLocation()">
+                    Check Weather
+                </button>
+                        <button onclick="logout()">logout</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CURRENT WEATHER -->
+    <section class="weather-section">
+
+        <div class="section-heading">
+            <p>YOUR FARM</p>
+            <h2>Current Weather</h2>
+        </div>
+
+        <div class="current-weather">
+
+            <div class="weather-main">
+                <div class="weather-icon">☀️</div>
+
+                <div>
+                    <h3 id="locationName">Kirinyaga, Kenya</h3>
+                    <div class="temperature">24°C</div>
+                    <p>Partly Cloudy</p>
+                </div>
+            </div>
+
+            <div class="weather-details">
+
+                <div class="weather-item">
+                    <span>🌧️</span>
+                    <h4>Rainfall</h4>
+                    <p>12 mm</p>
+                </div>
+
+                <div class="weather-item">
+                    <span>💧</span>
+                    <h4>Humidity</h4>
+                    <p>68%</p>
+                </div>
+
+                <div class="weather-item">
+                    <span>💨</span>
+                    <h4>Wind</h4>
+                    <p>14 km/h</p>
+                </div>
+
+                <div class="weather-item">
+                    <span>🌱</span>
+                    <h4>Soil Moisture</h4>
+                    <p>72%</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 DAY FORECAST -->
+    <section class="forecast-section">
+
+        <div class="section-heading">
+            <p>PLAN AHEAD</p>
+            <h2>7-Day Farm Forecast</h2>
+        </div>
+
+        <div class="forecast-container">
+
+            <div class="forecast-card">
+                <h3>MON</h3>
+                <div class="forecast-icon">☀️</div>
+                <h4>25°C</h4>
+                <p>Rain: 10%</p>
+                <span class="good">Good</span>
+            </div>
+
+            <div class="forecast-card">
+                <h3>TUE</h3>
+                <div class="forecast-icon">🌦️</div>
+                <h4>23°C</h4>
+                <p>Rain: 70%</p>
+                <span class="wet">Wet</span>
+            </div>
+
+            <div class="forecast-card">
+                <h3>WED</h3>
+                <div class="forecast-icon">🌧️</div>
+                <h4>22°C</h4>
+                <p>Rain: 80%</p>
+                <span class="rain">Rainy</span>
+            </div>
+
+            <div class="forecast-card">
+                <h3>THU</h3>
+                <div class="forecast-icon">☁️</div>
+                <h4>24°C</h4>
+                <p>Rain: 40%</p>
+                <span class="moderate">Moderate</span>
+            </div>
+
+            <div class="forecast-card">
+                <h3>FRI</h3>
+                <div class="forecast-icon">☀️</div>
+                <h4>26°C</h4>
+                <p>Rain: 15%</p>
+                <span class="good">Good</span>
+            </div>
+
+            <div class="forecast-card">
+                <h3>SAT</h3>
+                <div class="forecast-icon">🌤️</div>
+                <h4>25°C</h4>
+                <p>Rain: 25%</p>
+                <span class="good">Good</span>
+            </div>
+
+            <div class="forecast-card">
+                <h3>SUN</h3>
+                <div class="forecast-icon">🌦️</div>
+                <h4>23°C</h4>
+                <p>Rain: 60%</p>
+                <span class="wet">Wet</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FARM ACTION CENTER -->
+    <section class="action-section">
+
+        <div class="section-heading">
+            <p>SMART RECOMMENDATIONS</p>
+            <h2>What Should I Do Today?</h2>
+        </div>
+
+        <div class="action-card">
+
+            <div class="action-icon">
+                🌱
+            </div>
+
+            <div class="action-content">
+
+                <h3>Farm Action Recommendation</h3>
+
+                <p>
+                    Current conditions are suitable for field inspection,
+                    crop monitoring and weeding.
+                </p>
+
+                <ul>
+                    <li>✔️ Monitor crop health</li>
+                    <li>✔️ Inspect your field</li>
+                    <li>✔️ Check drainage before rainfall</li>
+                    <li>⚠️ Consider delaying irrigation</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RAINFALL INTELLIGENCE -->
+    <section class="rainfall-section">
+
+        <div class="section-heading">
+            <p>WATER INSIGHTS</p>
+            <h2>Rainfall Intelligence</h2>
+        </div>
+
+        <div class="rainfall-content">
+
+            <div class="rainfall-info">
+
+                <h3>Expected Rainfall</h3>
+
+                <div class="rain-number">
+                    48 <span>mm</span>
+                </div>
+
+                <p>Expected rainfall over the next 7 days.</p>
+
+                <div class="rain-status">
+                    🌧️ Moderate rainfall expected
+                </div>
+
+            </div>
+
+
+            <div class="rain-chart">
+
+                <div class="bar" style="height:30%;">
+                    <span>6</span>
+                    <small>Mon</small>
+                </div>
+
+                <div class="bar" style="height:65%;">
+                    <span>13</span>
+                    <small>Tue</small>
+                </div>
+
+                <div class="bar" style="height:85%;">
+                    <span>18</span>
+                    <small>Wed</small>
+                </div>
+
+                <div class="bar" style="height:40%;">
+                    <span>8</span>
+                    <small>Thu</small>
+                </div>
+
+                <div class="bar" style="height:15%;">
+                    <span>3</span>
+                    <small>Fri</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- IRRIGATION ADVISOR -->
+    <section class="irrigation-section">
+
+        <div class="section-heading">
+            <p>SMART WATER MANAGEMENT</p>
+            <h2>Smart Irrigation Advisor</h2>
+        </div>
+
+        <div class="irrigation-card">
+
+            <div class="irrigation-left">
+                <div class="big-icon">💧</div>
+
+                <div>
+                    <h3>Irrigation Status</h3>
+                    <p>Current soil moisture: <strong>72%</strong></p>
+                </div>
+            </div>
+
+            <div class="irrigation-result">
+
+                <h3>Recommended Irrigation</h3>
+
+                <strong>LOW</strong>
+
+                <p>
+                    Rainfall is expected soon. Consider reducing
+                    irrigation to conserve water.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CROP WEATHER ADVISOR -->
+    <section class="crop-section">
+
+        <div class="section-heading">
+            <p>CROP INTELLIGENCE</p>
+            <h2>Crop Weather Advisor</h2>
+            <p>Select a crop to receive a weather-based recommendation.</p>
+        </div>
+
+        <div class="crop-buttons">
+
+            <button onclick="showCropAdvice('Maize')">
+                🌽 Maize
+            </button>
+
+            <button onclick="showCropAdvice('Beans')">
+                🫘 Beans
+            </button>
+
+            <button onclick="showCropAdvice('Potatoes')">
+                🥔 Potatoes
+            </button>
+
+            <button onclick="showCropAdvice('Tomatoes')">
+                🍅 Tomatoes
+            </button>
+
+            <button onclick="showCropAdvice('Coffee')">
+                ☕ Coffee
+            </button>
+
+            <button onclick="showCropAdvice('Avocado')">
+                🥑 Avocado
+            </button>
+
+        </div>
+
+
+        <div class="crop-advice" id="cropAdvice">
+
+            <h3>🌱 Select a crop</h3>
+
+            <p>
+                Choose one of the crops above to see weather-based
+                farming advice.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- WEATHER ALERTS -->
+    <section class="alerts-section">
+
+        <div class="section-heading">
+            <p>IMPORTANT INFORMATION</p>
+            <h2>Weather Alerts</h2>
+        </div>
+
+        <div class="alerts-container">
+
+            <div class="alert yellow">
+                <span>🌧️</span>
+
+                <div>
+                    <h3>Rain Expected</h3>
+                    <p>
+                        Rain is expected within the next 24 hours.
+                        Check drainage around your farm.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="alert orange">
+                <span>💨</span>
+
+                <div>
+                    <h3>Wind Advisory</h3>
+                    <p>
+                        Moderate winds are expected. Check vulnerable
+                        farm structures.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WEATHER MAP -->
+    <section class="map-section">
+
+        <div class="section-heading">
+            <p>EXPLORE WEATHER</p>
+            <h2>Weather Across Kenya</h2>
+        </div>
+
+        <div class="map-placeholder">
+
+            <div class="map-overlay">
+
+                <h3>🇰🇪 Kenya Weather Map</h3>
+
+                <p>
+                    Explore weather conditions across different
+                    farming regions.
+                </p>
+
+                <select>
+                    <option>Select County</option>
+                    <option>Kirinyaga</option>
+                    <option>Nairobi</option>
+                    <option>Kiambu</option>
+                    <option>Nyeri</option>
+                    <option>Nakuru</option>
+                    <option>Meru</option>
+                    <option>Murang'a</option>
+                    <option>Machakos</option>
+                    <option>Embu</option>
+                    <option>Nyandarua</option>
+                        <option>Bungoma</option>
+                        <option>Kisumu</option>
+                        <option>Mombasa</option>
+                        <option>Uasin Gishu</option>
+                        <option>Laikipia</option>
+                        <option>Kericho</option>
+                        <option>Vihiga</option>
+                        <option>Siaya</option>
+                        <option>Busia</option>
+                        <option>Kitui</option>
+                        <option>Tharaka Nithi</option>
+                        <option>Kwale</option>
+                        <option>Garissa</option>
+                        <option>Wajir</option>
+                        <option>Mandera</option>
+                        <option>Isiolo</option>
+                        <option>Tana River</option>
+                        <option>Turkana</option>
+                        <option>West Pokot</option>
+                        <option>Elgeyo Marakwet</option>
+                        <option>Bomet</option>
+                        <option>Trans Nzoia</option>
+                        <option>Homa Bay</option>
+                        <option>Kisii</option>
+                        <option>Nyamira</option>
+                        <option>Nandi</option>
+                        <option>Narok</option>
+                        <option>Baringo</option>
+
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WEATHER HISTORY -->
+    <section class="history-section">
+
+        <div class="section-heading">
+            <p>FARM DATA</p>
+            <h2>Weather History</h2>
+        </div>
+
+        <div class="history-container">
+
+            <div class="history-card">
+                <span>🌡️</span>
+                <h3>24°C</h3>
+                <p>Average Temperature</p>
+            </div>
+
+            <div class="history-card">
+                <span>🌧️</span>
+                <h3>86 mm</h3>
+                <p>Total Rainfall</p>
+            </div>
+
+            <div class="history-card">
+                <span>💧</span>
+                <h3>70%</h3>
+                <p>Average Humidity</p>
+            </div>
+
+            <div class="history-card">
+                <span>☀️</span>
+                <h3>18</h3>
+                <p>Dry Days</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>🌱 AgriTech</h2>
+
+            <p>
+                Smart technology for better farming,
+                better decisions and a sustainable future.
+            </p>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="plants.html">Plants</a>
+                <a href="weather.html">Weather</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 AgriTech. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="weather.js"></script>
+
+</body>
+</html>

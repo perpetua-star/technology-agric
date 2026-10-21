@@ -1,0 +1,949 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | AgriTech</title>
+
+    <link rel="stylesheet" href="registration.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            🌱 <span>AgriTech</span>
+        </div>
+
+        
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="hero-small">
+                JOIN THE AGRITECH NETWORK
+            </span>
+
+            <h1>
+                Connect. Grow. <span>Prosper.</span>
+            </h1>
+
+            <p>
+                Join a digital agricultural community connecting
+                farmers, buyers and suppliers in one powerful platform.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= REGISTRATION ================= -->
+
+    <main class="registration-container">
+
+        <!-- PROGRESS -->
+
+        <div class="progress-container">
+
+            <div class="progress-step active">
+                <span>1</span>
+                <p>Role</p>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-step">
+                <span>2</span>
+                <p>Account</p>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-step">
+                <span>3</span>
+                <p>Details</p>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-step">
+                <span>4</span>
+                <p>Interests</p>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-step">
+                <span>5</span>
+                <p>Finish</p>
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form id="registrationForm">
+
+
+            <!-- ================= STEP 1 ================= -->
+
+            <section class="form-step active-step" id="step1">
+
+                <div class="step-heading">
+
+                    <span class="step-number">01</span>
+
+                    <div>
+                        <h2>How will you use AgriTech?</h2>
+
+                        <p>
+                            Choose the account type that best describes you.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="role-grid">
+
+                    <!-- FARMER -->
+
+                    <label class="role-card">
+
+                        <input
+                            type="radio"
+                            name="role"
+                            value="farmer"
+                        >
+
+                        <div class="role-icon">
+                            👨‍🌾
+                        </div>
+
+                        <h3>Farmer</h3>
+
+                        <p>
+                            Grow, manage and sell your agricultural products.
+                        </p>
+
+                        <div class="role-features">
+                            <span>✓ Find buyers</span>
+                            <span>✓ Manage crops</span>
+                            <span>✓ Access farming information</span>
+                        </div>
+
+                    </label>
+
+
+                    <!-- BUYER -->
+
+                    <label class="role-card">
+
+                        <input
+                            type="radio"
+                            name="role"
+                            value="buyer"
+                        >
+
+                        <div class="role-icon">
+                            🛒
+                        </div>
+
+                        <h3>Buyer</h3>
+
+                        <p>
+                            Discover agricultural products and connect with farmers.
+                        </p>
+
+                        <div class="role-features">
+                            <span>✓ Find farmers</span>
+                            <span>✓ Source produce</span>
+                            <span>✓ Compare products</span>
+                        </div>
+
+                    </label>
+
+
+                    <!-- SUPPLIER -->
+
+                    <label class="role-card">
+
+                        <input
+                            type="radio"
+                            name="role"
+                            value="supplier"
+                        >
+
+                        <div class="role-icon">
+                            📦
+                        </div>
+
+                        <h3>Supplier</h3>
+
+                        <p>
+                            Supply agricultural inputs and services to farmers.
+                        </p>
+
+                        <div class="role-features">
+                            <span>✓ Reach farmers</span>
+                            <span>✓ Promote products</span>
+                            <span>✓ Grow your market</span>
+                        </div>
+
+                    </label>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="next-btn"
+                    onclick="nextStep(1)"
+                >
+                    Continue
+                    <span>→</span>
+                </button>
+
+            </section>
+
+
+            <!-- ================= STEP 2 ================= -->
+
+            <section class="form-step" id="step2">
+
+                <div class="step-heading">
+
+                    <span class="step-number">02</span>
+
+                    <div>
+                        <h2>Create Your Account</h2>
+
+                        <p>
+                            Enter your basic account information.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="e.g. 0712 345 678"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="location">
+                            Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="Town / County"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm password"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        type="button"
+                        class="back-btn"
+                        onclick="previousStep(2)"
+                    >
+                        ← Back
+                    </button>
+
+                    <button
+                        type="button"
+                        class="next-btn"
+                        onclick="nextStep(2)"
+                    >
+                        Continue →
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STEP 3 ================= -->
+
+            <section class="form-step" id="step3">
+
+                <div class="step-heading">
+
+                    <span class="step-number">03</span>
+
+                    <div>
+                        <h2 id="detailsTitle">
+                            Your Details
+                        </h2>
+
+                        <p id="detailsDescription">
+                            Tell us more about yourself.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FARMER DETAILS -->
+
+                <div class="role-details" id="farmerDetails">
+
+                    <h3>🌾 Farm Information</h3>
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+
+                            <label>Farm Name</label>
+
+                            <input
+                                type="text"
+                                name="farmName"
+                                placeholder="e.g. Green Valley Farm"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>County</label>
+
+                            <select name="farmCounty">
+
+                                <option value="">
+                                    Select County
+                                </option>
+
+                                <option>Nairobi</option>
+                                <option>Kiambu</option>
+                                <option>Kirinyaga</option>
+                                <option>Nyeri</option>
+                                <option>Murang'a</option>
+                                <option>Embu</option>
+                                <option>Meru</option>
+                                <option>Nakuru</option>
+                                <option>Machakos</option>
+                                <option>Uasin Gishu</option>
+                                <option>Kisumu</option>
+                                <option>Kakamega</option>
+                                <option>Kisii</option>
+                                <option>Other</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Farm Size</label>
+
+                            <input
+                                type="number"
+                                name="farmSize"
+                                placeholder="e.g. 5 acres"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Farming Type</label>
+
+                            <select name="farmingType">
+
+                                <option value="">
+                                    Select type
+                                </option>
+
+                                <option>Crop Farming</option>
+                                <option>Livestock Farming</option>
+                                <option>Mixed Farming</option>
+                                <option>Horticulture</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUYER DETAILS -->
+
+                <div class="role-details" id="buyerDetails">
+
+                    <h3>🛒 Buyer Information</h3>
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+
+                            <label>Business / Organization Name</label>
+
+                            <input
+                                type="text"
+                                name="businessName"
+                                placeholder="Enter business name"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Buyer Type</label>
+
+                            <select name="buyerType">
+
+                                <option value="">
+                                    Select buyer type
+                                </option>
+
+                                <option>Individual</option>
+                                <option>Retailer</option>
+                                <option>Restaurant</option>
+                                <option>Hotel</option>
+                                <option>Wholesaler</option>
+                                <option>Processor</option>
+                                <option>Institution</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group full-width">
+
+                            <label>Products You Are Interested In</label>
+
+                            <input
+                                type="text"
+                                name="productsInterested"
+                                placeholder="e.g. Maize, Beans, Tomatoes"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUPPLIER DETAILS -->
+
+                <div class="role-details" id="supplierDetails">
+
+                    <h3>📦 Supplier Information</h3>
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+
+                            <label>Business Name</label>
+
+                            <input
+                                type="text"
+                                name="supplierBusiness"
+                                placeholder="Enter business name"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Supplier Category</label>
+
+                            <select name="supplierCategory">
+
+                                <option value="">
+                                    Select category
+                                </option>
+
+                                <option>Seeds</option>
+                                <option>Fertilizers</option>
+                                <option>Farm Equipment</option>
+                                <option>Pesticides</option>
+                                <option>Animal Feeds</option>
+                                <option>Irrigation Equipment</option>
+                                <option>Agricultural Services</option>
+                                <option>Other</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group full-width">
+
+                            <label>Products / Services Supplied</label>
+
+                            <input
+                                type="text"
+                                name="supplierProducts"
+                                placeholder="e.g. Seeds, fertilizers, irrigation equipment"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        type="button"
+                        class="back-btn"
+                        onclick="previousStep(3)"
+                    >
+                        ← Back
+                    </button>
+
+                    <button
+                        type="button"
+                        class="next-btn"
+                        onclick="nextStep(3)"
+                    >
+                        Continue →
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STEP 4 ================= -->
+
+            <section class="form-step" id="step4">
+
+                <div class="step-heading">
+
+                    <span class="step-number">04</span>
+
+                    <div>
+
+                        <h2>What Are You Looking For?</h2>
+
+                        <p>
+                            Choose the services that interest you.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FARMER INTERESTS -->
+
+                <div class="interest-section" id="farmerInterests">
+
+                    <h3>👨‍🌾 Farmer Interests</h3>
+
+                    <div class="interest-grid">
+
+                        <label>
+                            <input type="checkbox">
+                            📈 Market Prices
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            🛒 Find Buyers
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            🌱 Crop Information
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            📦 Find Farm Inputs
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            🌦️ Weather Updates
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            🧑‍🌾 Farming Techniques
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUYER INTERESTS -->
+
+                <div class="interest-section" id="buyerInterests">
+
+                    <h3>🛒 Buyer Interests</h3>
+
+                    <div class="interest-grid">
+
+                        <label>
+                            <input type="checkbox">
+                            👨‍🌾 Find Farmers
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            🌽 Find Fresh Produce
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            💰 Compare Prices
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            📦 Find Suppliers
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            🚚 Bulk Purchases
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUPPLIER INTERESTS -->
+
+                <div class="interest-section" id="supplierInterests">
+
+                    <h3>📦 Supplier Interests</h3>
+
+                    <div class="interest-grid">
+
+                        <label>
+                            <input type="checkbox">
+                            👨‍🌾 Find Farmers
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            📢 Promote Products
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            🤝 Find Customers
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            🌱 Sell Farm Inputs
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            📈 Expand My Market
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        type="button"
+                        class="back-btn"
+                        onclick="previousStep(4)"
+                    >
+                        ← Back
+                    </button>
+
+                    <button
+                        type="button"
+                        class="next-btn"
+                        onclick="nextStep(4)"
+                    >
+                        Review Account →
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STEP 5 ================= -->
+
+            <section class="form-step" id="step5">
+
+                <div class="step-heading">
+
+                    <span class="step-number">05</span>
+
+                    <div>
+
+                        <h2>Complete Your Registration</h2>
+
+                        <p>
+                            Review your information before creating your account.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUMMARY -->
+
+                <div class="summary">
+
+                    <div class="summary-item">
+
+                        <span>Account Type</span>
+
+                        <strong id="summaryRole">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>Full Name</span>
+
+                        <strong id="summaryName">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>Phone</span>
+
+                        <strong id="summaryPhone">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>Email</span>
+
+                        <strong id="summaryEmail">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>Location</span>
+
+                        <strong id="summaryLocation">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TERMS -->
+
+                <div class="terms">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <span>
+                            I agree to the
+                            <a href="#">Terms of Service</a>
+                            and
+                            <a href="#">Privacy Policy</a>.
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        type="button"
+                        class="back-btn"
+                        onclick="previousStep(5)"
+                    >
+                        ← Back
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="register-btn"
+                    >
+                        Create My Account
+                        <span>✓</span>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </form>
+
+
+        <!-- LOGIN -->
+
+        <p class="login-text">
+
+            Already have an account?
+
+            <a href="login.html">
+                Login here
+            </a>
+
+        </p>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 AgriTech | Connecting Agriculture Through Technology
+        </p>
+
+    </footer>
+
+
+    <script src="registration.js"></script>
+
+</body>
+</html>
